@@ -1,10 +1,10 @@
 from django.db import models
 from django.contrib.postgres.fields import ArrayField
 
-class Deltas(models.Model):
+class Delta(models.Model):
     lattice = ArrayField(
         ArrayField(
-            models.FloatField(null=True, blank=True),
+            models.FloatField(),
             size=40,
         ),
         size=60,

@@ -1,6 +1,6 @@
 from rest_framework import routers, serializers, viewsets
 
-from .models import Deltas
+from .models import Delta
 
 all_views = []
 
@@ -29,16 +29,16 @@ class APIRouter(routers.DefaultRouter):
             self._register_view(view)
 
 
-class DeltasSerializer(serializers.ModelSerializer):
+class DeltaSerializer(serializers.ModelSerializer):
     fields = ['name']
 
     class Meta:
-        model = Deltas
+        model = Delta
 
 
-class DeltasViewSet(viewsets.ReadOnlyModelViewSet):
-    queryset = Deltas.objects.all()
-    serializer_class = DeltasSerializer
+class DeltaViewSet(viewsets.ReadOnlyModelViewSet):
+    queryset = Delta.objects.all()
+    serializer_class = DeltaSerializer
 
 
-register_view(DeltasViewSet, 'deltas')
+register_view(DeltaViewSet, 'deltas')

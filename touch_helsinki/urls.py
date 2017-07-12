@@ -17,15 +17,17 @@ from django.conf.urls import url, include
 from django.contrib import admin
 from django.views.generic.base import RedirectView
 
-from touches.api import APIRouter
+# from touches.api import APIRouter
+from touches.views import DeltaView
 
-admin.autodiscover()
+# admin.autodiscover()
 
-router = APIRouter()
+# router = APIRouter()
 
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^v1/', include(router.urls)),
+    # url(r'^v1/', include(router.urls)),
+    url(r'^v1/', DeltaView.as_view()),
     url(r'^$', RedirectView.as_view(url='v1/'))
 ]
