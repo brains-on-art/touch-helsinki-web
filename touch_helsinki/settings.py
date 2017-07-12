@@ -19,7 +19,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 DEBUG = False
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', '35.158.60.149']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 
 
 # Application definition
