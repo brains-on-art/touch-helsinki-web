@@ -57,6 +57,7 @@ coverage.xml
 *.log
 /local_settings.py
 .django_secret
+static
 
 # Flask stuff:
 instance/
@@ -104,8 +105,6 @@ ENV/
 # mypy
 .mypy_cache/
 
-# uWSGI
-uwsgi_params
-
-# nginx conf
-nginx.conf
+# deployment confs (uWSGI and nginx)
+nginx.conf.local
+uwsgi.ini.local
