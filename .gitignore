@@ -103,3 +103,9 @@ ENV/
 
 # mypy
 .mypy_cache/
+
+# uWSGI
+uwsgi_params
+
+# nginx conf
+nginx.conf
