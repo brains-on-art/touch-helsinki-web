@@ -95,5 +95,9 @@ sudoedit /etc/nginx/nginx.conf
 # let nginx know about our uwsgi app
 sudo ln -s /path/to/project/nginx.conf /etc/nginx/sites-enabled/touch_helsinki_nginx.conf
 
-
+# configure supervisord to run uWSGI always
+sudo ln -s /home/ubuntu/touchelsinki/touch_helsinki/supervisord.conf /etc/supervisor/conf.d/uwsgi.conf
+sudo supervisorctl reread
+sudo supervisorctl update
+sudo supervisorctl status
 ```
